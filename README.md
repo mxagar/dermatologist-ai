@@ -14,11 +14,19 @@ I forked the starter code from the Github repository [udacity/dermatologist-ai](
 
 ## ISIC Challenge 2017
 
-The [2017 ISIC Challenge on Skin Lesion Analysis Towards Melanoma Detection](https://challenge.isic-archive.com/landing/2017/) is already closed, 
+Although the [2017 ISIC Challenge on Skin Lesion Analysis Towards Melanoma Detection](https://challenge.isic-archive.com/landing/2017/) is already closed, information on the challenge can be obtained from the official [website](https://challenge.isic-archive.com/landing/2017/).
+
+The challenge had three parts or tasks:
+
+- Part 1: Lesion Segmentation Task
+- Part 2: Dermoscopic Feature Classification Task
+- Part 3: Disease Classification Task
+
+The present project deals only with the third part or task.
 
 ### Challenge Results
 
-The organizers published an interesting summary of the results and insights from the best contributions in [this article](https://arxiv.org/pdf/1710.05006.pdf); some interesting points are:
+The challenge organizers published an interesting summary of the results and insights from the best contributions in [this article](https://arxiv.org/pdf/1710.05006.pdf); some interesting points associated with the third part/task are:
 
 - A
 - B
@@ -38,7 +46,6 @@ I downloaded the dataset from the links provided by Udacity to the non-committed
 - [validation data](https://s3-us-west-1.amazonaws.com/udacity-dlnfd/datasets/skin-cancer/valid.zip) (824.5 MB)
 - [test data](https://s3-us-west-1.amazonaws.com/udacity-dlnfd/datasets/skin-cancer/test.zip) (5.1 GB)
 
-TBD.
 ## Overview and File Structure
 
 TBD.
