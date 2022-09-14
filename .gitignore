@@ -3,3 +3,5 @@ data/
 .github/**
 .vscode
 literature
+.ipynb_checkpoints
+__pycache__
