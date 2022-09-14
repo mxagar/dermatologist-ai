@@ -15,6 +15,20 @@ The motivation comes from two sources that caught my attention:
 
 I decided to try one task of the 2017 ISIC Challenge; to that end, I forked the Github repository [udacity/dermatologist-ai](https://github.com/udacity/dermatologist-ai), which provides som evaluation starter code as well as some hints on the challenge.
 
+Overview of contents:
+
+- [Dermatologist AI: Skin Cancer Detection with Convolutional Neural Networks (CNNs)](#dermatologist-ai-skin-cancer-detection-with-convolutional-neural-networks-cnns)
+  - [ISIC Challenge 2017](#isic-challenge-2017)
+    - [Official Challenge Results](#official-challenge-results)
+    - [Dataset](#dataset)
+  - [Overview and File Structure](#overview-and-file-structure)
+    - [How to Use This](#how-to-use-this)
+    - [Dependencies](#dependencies)
+  - [Skin Cancer Detection Model](#skin-cancer-detection-model)
+  - [Preliminary Results](#preliminary-results)
+  - [Possible Improvements](#possible-improvements)
+  - [Authorship and License](#authorship-and-license)
+
 ## ISIC Challenge 2017
 
 Although the [2017 ISIC Challenge on Skin Lesion Analysis Towards Melanoma Detection](https://challenge.isic-archive.com/landing/2017/) is already closed, information on the challenge can be obtained from the official [website](https://challenge.isic-archive.com/landing/2017/).
