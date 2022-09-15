@@ -15,12 +15,12 @@ filename,y_true,y_pred
 ./data/test/melanoma/ISIC_0013411.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013414.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013455.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0013457.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0013457.jpg,melanoma,melanoma
 ./data/test/melanoma/ISIC_0013459.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013472.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013473.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013565.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0013577.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0013577.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0013588.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013615.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013617.jpg,melanoma,nevus
@@ -33,15 +33,15 @@ filename,y_true,y_pred
 ./data/test/melanoma/ISIC_0013767.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013813.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013814.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0013833.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0013833.jpg,melanoma,melanoma
 ./data/test/melanoma/ISIC_0013842.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013867.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013908.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0013917.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0013925.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0013948.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0013925.jpg,melanoma,seborrheic keratosis
+./data/test/melanoma/ISIC_0013948.jpg,melanoma,melanoma
 ./data/test/melanoma/ISIC_0013953.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0013987.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0013987.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0013988.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014027.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014059.jpg,melanoma,nevus
@@ -51,11 +51,11 @@ filename,y_true,y_pred
 ./data/test/melanoma/ISIC_0014129.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014148.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014160.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0014181.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0014186.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0014181.jpg,melanoma,seborrheic keratosis
+./data/test/melanoma/ISIC_0014186.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0014219.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014221.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0014233.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0014233.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0014255.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014270.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014284.jpg,melanoma,nevus
@@ -65,7 +65,7 @@ filename,y_true,y_pred
 ./data/test/melanoma/ISIC_0014349.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014369.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014423.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0014434.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0014434.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0014454.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014478.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014489.jpg,melanoma,nevus
@@ -75,11 +75,11 @@ filename,y_true,y_pred
 ./data/test/melanoma/ISIC_0014542.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014546.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014548.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0014559.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0014559.jpg,melanoma,melanoma
 ./data/test/melanoma/ISIC_0014663.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014666.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0014695.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0014703.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0014695.jpg,melanoma,seborrheic keratosis
+./data/test/melanoma/ISIC_0014703.jpg,melanoma,melanoma
 ./data/test/melanoma/ISIC_0014727.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014766.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014772.jpg,melanoma,nevus
@@ -88,7 +88,7 @@ filename,y_true,y_pred
 ./data/test/melanoma/ISIC_0014800.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014826.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014862.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0014872.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0014872.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0014883.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014912.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0014928.jpg,melanoma,nevus
@@ -97,24 +97,24 @@ filename,y_true,y_pred
 ./data/test/melanoma/ISIC_0014982.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015004.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015041.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0015046.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0015046.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0015050.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015071.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015115.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015119.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015127.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0015132.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0015133.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0015132.jpg,melanoma,melanoma
+./data/test/melanoma/ISIC_0015133.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0015136.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015142.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015156.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0015163.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0015167.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0015180.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0015163.jpg,melanoma,seborrheic keratosis
+./data/test/melanoma/ISIC_0015167.jpg,melanoma,melanoma
+./data/test/melanoma/ISIC_0015180.jpg,melanoma,seborrheic keratosis
 ./data/test/melanoma/ISIC_0015185.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015193.jpg,melanoma,nevus
 ./data/test/melanoma/ISIC_0015206.jpg,melanoma,nevus
-./data/test/melanoma/ISIC_0015229.jpg,melanoma,nevus
+./data/test/melanoma/ISIC_0015229.jpg,melanoma,melanoma
 ./data/test/melanoma/ISIC_0015251.jpg,melanoma,nevus
 ./data/test/nevus/ISIC_0012092.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0012095.jpg,nevus,nevus
@@ -123,7 +123,7 @@ filename,y_true,y_pred
 ./data/test/nevus/ISIC_0012152.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0012216.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0012357.jpg,nevus,nevus
-./data/test/nevus/ISIC_0012484.jpg,nevus,nevus
+./data/test/nevus/ISIC_0012484.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0012493.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0012551.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0012654.jpg,nevus,nevus
@@ -236,7 +236,7 @@ filename,y_true,y_pred
 ./data/test/nevus/ISIC_0014968.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0014969.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0014973.jpg,nevus,nevus
-./data/test/nevus/ISIC_0014974.jpg,nevus,nevus
+./data/test/nevus/ISIC_0014974.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0014977.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0014992.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0014994.jpg,nevus,nevus
@@ -257,7 +257,7 @@ filename,y_true,y_pred
 ./data/test/nevus/ISIC_0015023.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015026.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015030.jpg,nevus,nevus
-./data/test/nevus/ISIC_0015031.jpg,nevus,nevus
+./data/test/nevus/ISIC_0015031.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0015034.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015035.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015037.jpg,nevus,nevus
@@ -267,7 +267,7 @@ filename,y_true,y_pred
 ./data/test/nevus/ISIC_0015057.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015060.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015064.jpg,nevus,nevus
-./data/test/nevus/ISIC_0015078.jpg,nevus,nevus
+./data/test/nevus/ISIC_0015078.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0015089.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015102.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015118.jpg,nevus,nevus
@@ -321,9 +321,9 @@ filename,y_true,y_pred
 ./data/test/nevus/ISIC_0015279.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015283.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015291.jpg,nevus,nevus
-./data/test/nevus/ISIC_0015293.jpg,nevus,nevus
+./data/test/nevus/ISIC_0015293.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0015298.jpg,nevus,nevus
-./data/test/nevus/ISIC_0015309.jpg,nevus,nevus
+./data/test/nevus/ISIC_0015309.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0015310.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015311.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015312.jpg,nevus,nevus
@@ -416,12 +416,12 @@ filename,y_true,y_pred
 ./data/test/nevus/ISIC_0015968.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015969.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015971.jpg,nevus,nevus
-./data/test/nevus/ISIC_0015972.jpg,nevus,nevus
+./data/test/nevus/ISIC_0015972.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0015973.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015974.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015975.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015976.jpg,nevus,nevus
-./data/test/nevus/ISIC_0015978.jpg,nevus,nevus
+./data/test/nevus/ISIC_0015978.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0015979.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015980.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0015981.jpg,nevus,nevus
@@ -479,7 +479,7 @@ filename,y_true,y_pred
 ./data/test/nevus/ISIC_0016037.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0016038.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0016040.jpg,nevus,nevus
-./data/test/nevus/ISIC_0016041.jpg,nevus,nevus
+./data/test/nevus/ISIC_0016041.jpg,nevus,seborrheic keratosis
 ./data/test/nevus/ISIC_0016042.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0016043.jpg,nevus,nevus
 ./data/test/nevus/ISIC_0016044.jpg,nevus,nevus
@@ -517,10 +517,10 @@ filename,y_true,y_pred
 ./data/test/seborrheic_keratosis/ISIC_0012207.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012215.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012223.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012240.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0012240.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0012248.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012265.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012266.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0012266.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0012272.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012273.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012314.jpg,seborrheic keratosis,nevus
@@ -529,73 +529,73 @@ filename,y_true,y_pred
 ./data/test/seborrheic_keratosis/ISIC_0012358.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012364.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012372.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012375.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012387.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012388.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0012375.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0012387.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0012388.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0012414.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012428.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012432.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012447.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012448.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0012448.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0012510.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012522.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012537.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012548.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012705.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012757.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012786.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0012757.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0012786.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0012848.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012852.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012928.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0012955.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0012974.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0012974.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0013030.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0013035.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0013085.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0013035.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0013085.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0013169.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0013170.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0013203.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0013203.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0013270.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0013271.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0013281.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0013281.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0013319.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0013393.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0013393.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0013465.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0013673.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0013708.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0013673.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0013708.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0013764.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0013977.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0013977.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0014006.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014177.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014251.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0014177.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0014251.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0014278.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014386.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014392.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014409.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014419.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014457.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014474.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014500.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0014474.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0014500.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0014503.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014567.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0014567.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0014574.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014575.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0014575.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0014586.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014587.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014588.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014590.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014600.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014619.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014626.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014627.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014629.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0014626.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0014627.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0014629.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0014631.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014634.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014643.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014644.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0014634.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0014643.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0014644.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0014645.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014647.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014648.jpg,seborrheic keratosis,nevus
-./data/test/seborrheic_keratosis/ISIC_0014649.jpg,seborrheic keratosis,nevus
+./data/test/seborrheic_keratosis/ISIC_0014648.jpg,seborrheic keratosis,seborrheic keratosis
+./data/test/seborrheic_keratosis/ISIC_0014649.jpg,seborrheic keratosis,seborrheic keratosis
 ./data/test/seborrheic_keratosis/ISIC_0014652.jpg,seborrheic keratosis,nevus
 ./data/test/seborrheic_keratosis/ISIC_0014653.jpg,seborrheic keratosis,nevus
