@@ -29,7 +29,6 @@ Overview of contents:
   - [Overview and File Structure](#overview-and-file-structure)
     - [How to Use This](#how-to-use-this)
     - [Dependencies](#dependencies)
-  - [Skin Cancer Classification CNN and Convolutional Autoencoder](#skin-cancer-classification-cnn-and-convolutional-autoencoder)
   - [Preliminary Results](#preliminary-results)
   - [Possible Improvements](#possible-improvements)
   - [Authorship and License](#authorship-and-license)
@@ -125,11 +124,6 @@ conda install pytorch torchvision -c pytorch
 conda install pip
 pip install -r requirements.txt
 ```
-
-## Skin Cancer Classification CNN and Convolutional Autoencoder
-
-The following picture shows the two models defined in each of the notebooks. The first is a convolutional **classifier** based on [ResNet50](https://en.wikipedia.org/wiki/Residual_neural_network) which is used for estimating the type skin lesion. The second is a convolutional **autoencoder** which is trained to encode (compress) and decode (expand) images so that the input and expanded images are as similar as possible.
-
 
 ## Preliminary Results
 
