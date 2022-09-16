@@ -30,7 +30,11 @@ Overview of contents:
     - [How to Use This](#how-to-use-this)
     - [Dependencies](#dependencies)
   - [Preliminary Results](#preliminary-results)
+        - [Classifier](#classifier)
+        - [Autoencoder & T-SNE](#autoencoder--t-sne)
   - [Possible Improvements](#possible-improvements)
+        - [Classifier](#classifier-1)
+        - [Autoencoder & T-SNE](#autoencoder--t-sne-1)
   - [Authorship and License](#authorship-and-license)
 
 ## ISIC Challenge 2017
@@ -129,7 +133,7 @@ pip install -r requirements.txt
 
 Both models are rather simple and produce, in consequence, very bad results; however, the research framework is now built to explore more appropriate approaches, as outlined in the [improvements section](#possible-improvements) :wink:
 
-**Classifier**
+##### Classifier
 
 - The classifier has a ROC-AUC of 0.53 for the simplified classification benign vs. malign.
 - Most of the melanoma cases are predicted as other types of skin lesions.
@@ -156,7 +160,7 @@ Both models are rather simple and produce, in consequence, very bad results; how
 </tr>
 </table>
 
-**Autoencoder & T-SNE**
+##### Autoencoder & T-SNE
 
 - The autoencoder is not able to meaningfully compress the images, and hence, the encoded image representations are not 
 - The autoencoder is biased: it underfits the dataset, because the learning curves decrease fast at the begining and don't change much later on.
@@ -187,26 +191,20 @@ Both models are rather simple and produce, in consequence, very bad results; how
 </table>
 
 
-
 <p align="center">
   <img src="./images/t_sne.png" width=500 alt="Kid identified as a Brussels Griffon">
 </p>
 
 
-
-
-
-
-
 ## Possible Improvements
 
-**Classifier**
+##### Classifier
 
 - [ ] Similarly as [Esteva et al.](https://www.nature.com/articles/nature21056.epdf?author_access_token=8oxIcYWf5UNrNpHsUHd2StRgN0jAjWel9jnR3ZoTv0NXpMHRAJy8Qn10ys2O4tuPakXos4UhQAFZ750CsBNMMsISFHIKinKDMKjShCpHIlYPYUHhNzkn6pSnOCt0Ftf6) did, I should fine tune the backbone, i.e., the weights of the backbone should be optimized for the dataset, too.
 
-**Autoencoder & T-SNE**
+##### Autoencoder & T-SNE
 
-- [ ] Add more depth to the filters.
+- [ ] Add more depth to the filters.
 - [ ] Add linear layers in the bottleneck.
 - [ ] Increase the number of parameters one order of magnitude and see if the behavior improves (i.e., 7M parameters).
 - [ ] Use *upsampling* instead of transpose convolution (to solve the checkerboard artifacts). [Example](https://github.com/mxagar/deep-learning-v2-pytorch/tree/master/autoencoder/convolutional-autoencoder).
