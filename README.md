@@ -19,12 +19,13 @@ Overview of contents:
 
 - [Dermatologist AI: Skin Cancer Detection with Convolutional Neural Networks (CNNs)](#dermatologist-ai-skin-cancer-detection-with-convolutional-neural-networks-cnns)
   - [ISIC Challenge 2017](#isic-challenge-2017)
+    - [My Version](#my-version)
     - [Official Challenge Results](#official-challenge-results)
     - [Dataset](#dataset)
   - [Overview and File Structure](#overview-and-file-structure)
     - [How to Use This](#how-to-use-this)
     - [Dependencies](#dependencies)
-  - [Skin Cancer Detection Model](#skin-cancer-detection-model)
+  - [Skin Cancer Classification CNN and Convolutional Autoencoder](#skin-cancer-classification-cnn-and-convolutional-autoencoder)
   - [Preliminary Results](#preliminary-results)
   - [Possible Improvements](#possible-improvements)
   - [Authorship and License](#authorship-and-license)
@@ -44,6 +45,10 @@ The present project deals only with the **third part or task**, which is evaluat
 1. The binary classification between **benign** (nevus and seborrheic keratosis) vs. **malign** (melanoma),
 2. The binary classification between skin lesions of origin in the **melanocyte** skin cells (nevus and melanoma) vs **keratinocyte** skin cells (seborrheic keratosis).
 3. The mean of the two above.
+
+### My Version
+
+I have created a model that performs a multi-class classification and computed from its inferences the metrics of the 3 cases, but I have mainly focused on the first case: benign vs. malign. Additionally, I have defined an Autoencoder which generates compressed representations of the images; with them, I have applied a T-SNE visualization to the test split.
 
 ### Official Challenge Results
 
@@ -75,27 +80,35 @@ The images originate from the [ISIC Archive](https://www.isic-archive.com/).
 The project folder contains the following files:
 
 ```
-Instructions.md             # Original project instructions from Udacity
-LICENSE.txt                 # License
-README.md                   # Current file
-data/                       # Dataset
-dermatology_ai.ipynb        # Project notebook
-get_results.py              # (Unused) Script for generating a ROC plot + confusion matrix
-ground_truth.csv            # (Unused) True labels wrt. 3 cases/tasks of part 3
-images/                     # Auxiliary images
-requirements.txt            # Dependencies
-sample_predictions.csv      # (Unused) Example output wrt. 3 cases/tasks of part 3
+skin_lesion_classification.ipynb        # Project notebook 1: Classification
+dataset_structure_visualization.ipynb   # Project notebook 2: T-SNE Visualization
+README.md                               # Current file
+Instructions.md                         # Original project instructions from Udacity
+data/                                   # Dataset
+images/                                 # Auxiliary images
+requirements.txt                        # Dependencies
+results.csv                             # My results with the model from notebook 1
+LICENSE.txt                             # License
+models/                                 # (Uncommitted) Models folder
+get_results.py                          # (Unused) Script for generating a ROC plot + confusion matrix
+ground_truth.csv                        # (Unused) True labels wrt. 3 cases/tasks of part 3
+sample_predictions.csv                  # (Unused) Example output wrt. 3 cases/tasks of part 3
 ```
 
-The most important file is [`dermatology_ai.ipynb`](dermatology_ai.ipynb), which contains the complete project development. The dataset is contained in `data/`, but images are not committed.
+The most important files are the notebooks, which contain the complete project development. The dataset is contained in `data/`, but images are not committed.
 
 Note that there are some *unused* files that come from the forked repository; the original [`Instructions.md`](Instructions.md) explain their whereabouts.
 
 ### How to Use This
 
-Install the [dependencies](#dependencies) and open [`dermatology_ai.ipynb`](dermatology_ai.ipynb), which can be run from start to end.
+Install the [dependencies](#dependencies) and open the notebooks, which can be run independently and from start to end:
 
-The project has a strong research character; the code is not production ready.
+- [`skin_lesion_classification.ipynb`](skin_lesion_classification.ipynb): 
+- [`dataset_structure_visualization.ipynb`](dataset_structure_visualization.ipynb): 
+
+Note that if you run the notebooks from start to end you'll start training the models at some point, which might take several hours (each model took 6-8 hours on my Macbook Pro 2021 M1 with the current settings).
+
+The project has a strong research character; the code is not production ready yet ;-)
 
 ### Dependencies
 
@@ -109,7 +122,7 @@ conda install pip
 pip install -r requirements.txt
 ```
 
-## Skin Cancer Detection Model
+## Skin Cancer Classification CNN and Convolutional Autoencoder
 
 TBD.
 
