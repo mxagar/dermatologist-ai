@@ -8,7 +8,11 @@ This repository contains the definition and evaluation of a Convolutional Neural
 
 ![Skin Disease Classes](./images/skin_disease_classes.png)
 
-The motivation comes from two sources that caught my attention:
+Additionally, the images are compressed with an [Autoencoder](https://en.wikipedia.org/wiki/Autoencoder) and visualized using [T-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
+
+Although the [preliminary results](#preliminary-results) are far from good, I think I've built a research framework with which I can easily try new approaches to hopefully improve the outcome -- if I find some time for that...
+
+The motivation of the project comes from two sources that caught my attention:
 
 - The Nature paper by [Esteva et al.](https://www.nature.com/articles/nature21056.epdf?author_access_token=8oxIcYWf5UNrNpHsUHd2StRgN0jAjWel9jnR3ZoTv0NXpMHRAJy8Qn10ys2O4tuPakXos4UhQAFZ750CsBNMMsISFHIKinKDMKjShCpHIlYPYUHhNzkn6pSnOCt0Ftf6), in which the authors show how a CNN architecture based on the [Inception-V3](https://en.wikipedia.org/wiki/Inceptionv3) network achieves a **dermatologist-level classification of skin cancer**.
 - The [2017 ISIC Challenge on Skin Lesion Analysis Towards Melanoma Detection](https://challenge.isic-archive.com/landing/2017/).
@@ -19,7 +23,7 @@ Overview of contents:
 
 - [Dermatologist AI: Skin Cancer Detection with Convolutional Neural Networks (CNNs)](#dermatologist-ai-skin-cancer-detection-with-convolutional-neural-networks-cnns)
   - [ISIC Challenge 2017](#isic-challenge-2017)
-    - [My Version](#my-version)
+    - [This Version](#this-version)
     - [Official Challenge Results](#official-challenge-results)
     - [Dataset](#dataset)
   - [Overview and File Structure](#overview-and-file-structure)
@@ -46,7 +50,7 @@ The present project deals only with the **third part or task**, which is evaluat
 2. The binary classification between skin lesions of origin in the **melanocyte** skin cells (nevus and melanoma) vs **keratinocyte** skin cells (seborrheic keratosis).
 3. The mean of the two above.
 
-### My Version
+### This Version
 
 I have created a model that performs a multi-class classification and computed from its inferences the metrics of the 3 cases, but I have mainly focused on the first case: benign vs. malign. Additionally, I have defined an Autoencoder which generates compressed representations of the images; with them, I have applied a [T-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding) visualization to the test split.
 
@@ -126,30 +130,17 @@ pip install -r requirements.txt
 
 The following picture shows the two models defined in each of the notebooks. The first is a convolutional **classifier** based on [ResNet50](https://en.wikipedia.org/wiki/Residual_neural_network) which is used for estimating the type skin lesion. The second is a convolutional **autoencoder** which is trained to encode (compress) and decode (expand) images so that the input and expanded images are as similar as possible.
 
-Both models are rather simple and produce, in consequence, very improvable results; however, the research framework is now built to explore more appropriate approaches :wink:
 
 ## Preliminary Results
 
-TBD.
+Both models are rather simple and produce, in consequence, very bad results; however, the research framework is now built to explore more appropriate approaches, as outlined in the [improvements section](#possible-improvements) :wink:
 
-<table cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
-<tr >
-<td style="border: none;">
+**Classifier**
 
-<p align="center">
-  <img src="./images/confusion_matrix.png" alt="Brussels Griffon">
-</p>
-
-</td>
-<td style="border: none;">
-
-<p align="center">
-  <img src="./images/roc.png" alt="Kid identified as a Brussels Griffon">
-</p>
-
-</td>
-</tr>
-</table>
+- The classifier has a ROC-AUC of 0.53 for the simplified classification benign vs. malign.
+- Most of the melanoma cases are predicted as other types of skin lesions.
+- Seborrheic keratosis is often predicted as nevus.
+- This is a nice example of why the accuracy metric is really bad for such inbalanced classification problems; even though the accuracy scores 70%, the recall for the malign vs. benign case is 0.07.
 
 
 <table cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
@@ -157,14 +148,44 @@ TBD.
 <td style="border: none;">
 
 <p align="center">
-  <img src="./images/melanoma_sample_real.png" alt="Brussels Griffon">
+  <img src="./images/confusion_matrix.png" width=350 alt="Brussels Griffon">
 </p>
 
 </td>
 <td style="border: none;">
 
 <p align="center">
-  <img src="./images/melanoma_sample_autoencoder.png" alt="Kid identified as a Brussels Griffon">
+  <img src="./images/roc.png" width=350 alt="Kid identified as a Brussels Griffon">
+</p>
+
+</td>
+</tr>
+</table>
+
+**Autoencoder & T-SNE**
+
+- The autoencoder is not able to meaningfully compress the images, and hence, the encoded image representations are not 
+- The autoencoder is biased: it underfits the dataset, because the learning curves decrease fast at the begining and don't change much later on.
+- The transformed images are quite different/low resolution compared to the original ones; it's difficult for the compressed representations to contain enough information to distinguish between classes.
+- The transpose convolutions create checkerboard artifacts, as reported by [Odena et al.](https://distill.pub/2016/deconv-checkerboard/).
+- As expected, the T-SNE transformation in 2D doesn't shown clearly differentiated point clusters.
+
+
+<table cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
+<tr >
+<td style="border: none;">
+
+<p align="center">
+  <p align="center">Input to Autoencoder</p>
+  <img src="./images/melanoma_sample_real.png" width=350 alt="Brussels Griffon">
+</p>
+
+</td>
+<td style="border: none;">
+
+<p align="center">
+  <p align="center">Output from Autoencoder</p>
+  <img src="./images/melanoma_sample_autoencoder.png" width=350 alt="Kid identified as a Brussels Griffon">
 </p>
 
 </td>
@@ -174,7 +195,7 @@ TBD.
 
 
 <p align="center">
-  <img src="./images/t_sne.png" alt="Kid identified as a Brussels Griffon">
+  <img src="./images/t_sne.png" width=500 alt="Kid identified as a Brussels Griffon">
 </p>
 
 
@@ -185,27 +206,18 @@ TBD.
 
 ## Possible Improvements
 
-Classifier:
+**Classifier**
 
-- Overall, the model doesn't work:
-    - Most of the melanoma cases are predicted as other types of skin lesions.
-    - Seborrheic keratosis is often predicted as nevus.
-- The accuracy metric is really bad for such inbalanced classification problems; even though it is 70%, the recall for the malign vs. bening case is 0.07.
-- Similarly as Esteva et al. did, I should fine tune the backbone, i.e., the weights of the backbone should be optimized for the dataset, too.
+- [ ] Similarly as [Esteva et al.](https://www.nature.com/articles/nature21056.epdf?author_access_token=8oxIcYWf5UNrNpHsUHd2StRgN0jAjWel9jnR3ZoTv0NXpMHRAJy8Qn10ys2O4tuPakXos4UhQAFZ750CsBNMMsISFHIKinKDMKjShCpHIlYPYUHhNzkn6pSnOCt0Ftf6) did, I should fine tune the backbone, i.e., the weights of the backbone should be optimized for the dataset, too.
 
-Autoencoder:
+**Autoencoder & T-SNE**
 
-- The autoencoder is biased: it underfits the dataset, because the learning curves decrease fast at t he begining and don't change much later on.
-- The transformed images are quite different/low resolution compared to the orginal ones; it's difficult that the commpressed representations contain enough information to distinguish between classes.
-- The transpose convolutions create checkerboard artifacts, as reported by [Odena et al.](https://distill.pub/2016/deconv-checkerboard/).
-- As expected, the T-SNE transformation and reduction to 2D doesn't shown clearnly differentiated point clusters.
-- It probably makes more sense to use the train split for the T-SNE visualization; however, I would need to set shuffle=False in the data loader to be able to track sample filenames easily.
-- If the T-SNE visualization shows distinct clusters, I can try to find similar images simply by using the dot product distance between image vectors.
-- How to adress those problems:
-    - Add more depth to the filters.
-    - Add linear layers in the bottleneck.
-    - Aim first for an order of magnitude larger network ans see if the behavior repeats (i.e., 7M)
-    - Use upsampling instead of transpose convolution (to soolver the checkerboard artifacts)
+- [ ] Add more depth to the filters.
+- [ ] Add linear layers in the bottleneck.
+- [ ] Increase the number of parameters one order of magnitude and see if the behavior improves (i.e., 7M parameters).
+- [ ] Use *upsampling* instead of transpose convolution (to solve the checkerboard artifacts). [Example](https://github.com/mxagar/deep-learning-v2-pytorch/tree/master/autoencoder/convolutional-autoencoder).
+- [ ] It probably makes more sense to use the train split for the T-SNE visualization; however, I would need to set shuffle=False in the data loader to be able to track sample filenames easily.
+- [ ] If the T-SNE visualization shows distinct clusters, I can try to find similar images simply by using the dot product distance between image vectors.
 
 ## Authorship and License
 
