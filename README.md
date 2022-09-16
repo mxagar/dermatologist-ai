@@ -48,7 +48,7 @@ The present project deals only with the **third part or task**, which is evaluat
 
 ### My Version
 
-I have created a model that performs a multi-class classification and computed from its inferences the metrics of the 3 cases, but I have mainly focused on the first case: benign vs. malign. Additionally, I have defined an Autoencoder which generates compressed representations of the images; with them, I have applied a T-SNE visualization to the test split.
+I have created a model that performs a multi-class classification and computed from its inferences the metrics of the 3 cases, but I have mainly focused on the first case: benign vs. malign. Additionally, I have defined an Autoencoder which generates compressed representations of the images; with them, I have applied a [T-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding) visualization to the test split.
 
 ### Official Challenge Results
 
@@ -103,12 +103,12 @@ Note that there are some *unused* files that come from the forked repository; th
 
 Install the [dependencies](#dependencies) and open the notebooks, which can be run independently and from start to end:
 
-- [`skin_lesion_classification.ipynb`](skin_lesion_classification.ipynb): 
-- [`dataset_structure_visualization.ipynb`](dataset_structure_visualization.ipynb): 
+- [`skin_lesion_classification.ipynb`](skin_lesion_classification.ipynb): CNN model definition, training and evaluation with frozen [ResNet50](https://en.wikipedia.org/wiki/Residual_neural_network) as backbone.
+- [`dataset_structure_visualization.ipynb`](dataset_structure_visualization.ipynb): Convolutional Autoencoder definition and training; the encoder is used to generate compressed image representations, which are used to visualize the dataset applying [T-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
 
 Note that if you run the notebooks from start to end you'll start training the models at some point, which might take several hours (each model took 6-8 hours on my Macbook Pro 2021 M1 with the current settings).
 
-The project has a strong research character; the code is not production ready yet ;-)
+The project has a strong research character; the code is not production ready yet :wink:
 
 ### Dependencies
 
@@ -124,19 +124,92 @@ pip install -r requirements.txt
 
 ## Skin Cancer Classification CNN and Convolutional Autoencoder
 
-TBD.
+The following picture shows the two models defined in each of the notebooks. The first is a convolutional **classifier** based on [ResNet50](https://en.wikipedia.org/wiki/Residual_neural_network) which is used for estimating the type skin lesion. The second is a convolutional **autoencoder** which is trained to encode (compress) and decode (expand) images so that the input and expanded images are as similar as possible.
+
+Both models are rather simple and produce, in consequence, very improvable results; however, the research framework is now built to explore more appropriate approaches :wink:
 
 ## Preliminary Results
 
 TBD.
 
+<table cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
+<tr >
+<td style="border: none;">
+
+<p align="center">
+  <img src="./images/confusion_matrix.png" alt="Brussels Griffon">
+</p>
+
+</td>
+<td style="border: none;">
+
+<p align="center">
+  <img src="./images/roc.png" alt="Kid identified as a Brussels Griffon">
+</p>
+
+</td>
+</tr>
+</table>
+
+
+<table cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
+<tr >
+<td style="border: none;">
+
+<p align="center">
+  <img src="./images/melanoma_sample_real.png" alt="Brussels Griffon">
+</p>
+
+</td>
+<td style="border: none;">
+
+<p align="center">
+  <img src="./images/melanoma_sample_autoencoder.png" alt="Kid identified as a Brussels Griffon">
+</p>
+
+</td>
+</tr>
+</table>
+
+
+
+<p align="center">
+  <img src="./images/t_sne.png" alt="Kid identified as a Brussels Griffon">
+</p>
+
+
+
+
+
+
+
 ## Possible Improvements
 
-TBD.
+Classifier:
+
+- Overall, the model doesn't work:
+    - Most of the melanoma cases are predicted as other types of skin lesions.
+    - Seborrheic keratosis is often predicted as nevus.
+- The accuracy metric is really bad for such inbalanced classification problems; even though it is 70%, the recall for the malign vs. bening case is 0.07.
+- Similarly as Esteva et al. did, I should fine tune the backbone, i.e., the weights of the backbone should be optimized for the dataset, too.
+
+Autoencoder:
+
+- The autoencoder is biased: it underfits the dataset, because the learning curves decrease fast at t he begining and don't change much later on.
+- The transformed images are quite different/low resolution compared to the orginal ones; it's difficult that the commpressed representations contain enough information to distinguish between classes.
+- The transpose convolutions create checkerboard artifacts, as reported by [Odena et al.](https://distill.pub/2016/deconv-checkerboard/).
+- As expected, the T-SNE transformation and reduction to 2D doesn't shown clearnly differentiated point clusters.
+- It probably makes more sense to use the train split for the T-SNE visualization; however, I would need to set shuffle=False in the data loader to be able to track sample filenames easily.
+- If the T-SNE visualization shows distinct clusters, I can try to find similar images simply by using the dot product distance between image vectors.
+- How to adress those problems:
+    - Add more depth to the filters.
+    - Add linear layers in the bottleneck.
+    - Aim first for an order of magnitude larger network ans see if the behavior repeats (i.e., 7M)
+    - Use upsampling instead of transpose convolution (to soolver the checkerboard artifacts)
 
 ## Authorship and License
 
-This repository was forked from [udacity/dermatologist-ai](https://github.com/udacity/dermatologist-ai) and modified to the present status following the original [license](LICENSE.txt) from Udacity.
+This repository was forked from [udacity/dermatologist-ai](https://github.com/udacity/dermatologist-ai) and modified to the present status following the original [license](LICENSE.txt) from Udacity. Note that the substantial content doesn't come from Udacity.
 
 Mikel Sagardia, 2022.  
 No guarantees.
