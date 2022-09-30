@@ -10,7 +10,10 @@ This repository contains the definition and evaluation of a Convolutional Neural
 
 Additionally, the images are compressed with an [Autoencoder](https://en.wikipedia.org/wiki/Autoencoder) and visualized using [T-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
 
-Although the [preliminary results](#preliminary-results) are far from good, I think I've built a research framework with which I can easily try new approaches to hopefully improve the outcome -- if I find some time for that...
+:warning: Important note, first of all: The [preliminary results](#preliminary-results) are far from good; however, I think I've built a research framework with which I can easily try new approaches to hopefully improve the outcome. See the the section [Possible Improvements](#Possible-Improvements).
+
+[![Unfinished](https://img.shields.io/badge/status-unfinished-orange)](https://shields.io/#your-badge)
+
 
 The motivation of the project comes from two sources that caught my attention:
 
@@ -201,6 +204,7 @@ Both models are rather simple and produce, in consequence, very bad results; how
 ##### Classifier
 
 - [ ] Similarly as [Esteva et al.](https://www.nature.com/articles/nature21056.epdf?author_access_token=8oxIcYWf5UNrNpHsUHd2StRgN0jAjWel9jnR3ZoTv0NXpMHRAJy8Qn10ys2O4tuPakXos4UhQAFZ750CsBNMMsISFHIKinKDMKjShCpHIlYPYUHhNzkn6pSnOCt0Ftf6) did, I should fine tune the backbone, i.e., the weights of the backbone should be optimized for the dataset, too.
+- [ ] Train it longer on Google Colab Pro or on a device with a more powerful GPU.
 
 ##### Autoencoder & T-SNE
 
