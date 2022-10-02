@@ -134,15 +134,15 @@ pip install -r requirements.txt
 
 ## Preliminary Results
 
-Both models are rather simple and produce, in consequence, very bad results; however, the research framework is now built to explore more appropriate approaches, as outlined in the [improvements section](#possible-improvements) :wink:
+Both models produce very bad results; however, the research framework is now built to explore more appropriate approaches, as outlined in the [improvements section](#possible-improvements) :wink:
 
 ##### Classifier
 
-- The classifier has a ROC-AUC of 0.53 for the simplified classification benign vs. malign.
-- Most of the melanoma cases are predicted as other types of skin lesions.
-- Seborrheic keratosis is often predicted as nevus.
-- This is a nice example of why the accuracy metric is really bad for such inbalanced classification problems; even though the accuracy scores 70%, the recall for the malign vs. benign case is 0.07.
-
+- Current versionI trained this version on Google Colab Pro with a Tesla T4 for 4-5 hours (50 epochs)
+  - This version is better than the previous one: Frozen ResNet50 trained for 20 epochs
+- The classifier has a ROC-AUC of 0.68 for the simplified classification benign vs. malign.
+- Melanoma and seborrheic keratosis are often predicted as other skin lesions.
+- The recall for the malign vs. benign case is 0.58.
 
 <table cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
 <tr >
@@ -203,8 +203,11 @@ Both models are rather simple and produce, in consequence, very bad results; how
 
 ##### Classifier
 
-- [ ] Similarly as [Esteva et al.](https://www.nature.com/articles/nature21056.epdf?author_access_token=8oxIcYWf5UNrNpHsUHd2StRgN0jAjWel9jnR3ZoTv0NXpMHRAJy8Qn10ys2O4tuPakXos4UhQAFZ750CsBNMMsISFHIKinKDMKjShCpHIlYPYUHhNzkn6pSnOCt0Ftf6) did, I should fine tune the backbone, i.e., the weights of the backbone should be optimized for the dataset, too.
-- [ ] Train it longer on Google Colab Pro or on a device with a more powerful GPU.
+- [x] Similarly as [Esteva et al.](https://www.nature.com/articles/nature21056.epdf?author_access_token=8oxIcYWf5UNrNpHsUHd2StRgN0jAjWel9jnR3ZoTv0NXpMHRAJy8Qn10ys2O4tuPakXos4UhQAFZ750CsBNMMsISFHIKinKDMKjShCpHIlYPYUHhNzkn6pSnOCt0Ftf6) did, I should fine tune the backbone, i.e., the weights of the backbone should be optimized for the dataset, too.
+- [x] Train it longer on Google Colab Pro or on a device with a more powerful GPU.
+- [ ] Try with a learning rate scheduler, using a larger learning rate at the beginning
+- [ ] Remove one fully connected layer in the classifier and check what happens
+- [ ] Probably a strong data augmentation is needed; I can consider taking more images from the ISIC database
 
 ##### Autoencoder & T-SNE
 
